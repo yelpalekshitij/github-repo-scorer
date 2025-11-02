@@ -80,6 +80,7 @@ jobs:
             ghcr.io/${{ github.repository }}:${{ github.sha }}
             docker.io/${{ secrets.DOCKERHUB_USERNAME }}/github-repo-scorer:latest
             docker.io/${{ secrets.DOCKERHUB_USERNAME }}/github-repo-scorer:${{ github.sha }}
+          platforms: linux/amd64,linux/arm64
 
       - name: Display pushed image info
         run: |
