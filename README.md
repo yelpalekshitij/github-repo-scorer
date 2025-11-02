@@ -1,5 +1,10 @@
 # 📘 github-repo-scorer
 
+[![Build Status](https://github.com/yelpalekshitij/github-repo-scorer/actions/workflows/gradle.yml/badge.svg)](https://github.com/yelpalekshitij/github-repo-scorer/actions/workflows/gradle.yml)
+[![Docker Image](https://img.shields.io/badge/docker-ghcr.io%2Fyelpale-blue)](https://ghcr.io/yelpalekshitij/github-repo-scorer)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Release](https://img.shields.io/github/v/release/yelpalekshitij/github-repo-scorer)](https://github.com/yelpalekshitij/github-repo-scorer/releases)
+
 ## Overview
 `github-repo-scorer` is a backend service that queries public GitHub repositories based on user-defined criteria (language, creation date) and assigns a **popularity score** using stars, forks, and update recency.  
 
