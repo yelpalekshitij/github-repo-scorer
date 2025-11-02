@@ -18,10 +18,25 @@ repositories {
     mavenCentral()
 }
 
+def springBootVersion = "3.5.7"
+def lombokVersion = "1.18.42"
+
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Spring boot related deps
+    implementation "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+
+    // Caching
+    implementation "org.springframework.boot:spring-boot-starter-cache:$springBootVersion"
+    implementation "com.github.ben-manes.caffeine:caffeine"
+
+    // Mappers
+    implementation "com.fasterxml.jackson.core:jackson-databind"
+    implementation "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    // Tests
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
 }
 
 tasks.named('test') {
