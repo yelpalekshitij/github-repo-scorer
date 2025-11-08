@@ -52,7 +52,7 @@ public class GithubRepoService implements IGithubRepoService {
     }
 
     @Override
-    @Cacheable(cacheNames = "repoScores", key = "#language + '_' + #date.toString()")
+    @Cacheable(cacheNames = "repoScores", key = "#language + '_' + #date.toString()", sync = true)
     public List<RepositoryDTO> getPopularGithubRepos(String language, LocalDate date) {
 
         logger.info("Fetching GitHub repositories for language {} and date {}", language, date);

@@ -1,0 +1,16 @@
+spring:
+  cache:
+    type: caffeine
+    caffeine:
+      spec: maximumSize=1000,expireAfterWrite=15m
+
+app-config:
+  github:
+    api-url: https://api.github.com
+    repositories-path: "/search/repositories"
+    per-page: 100 # Hard limit by Github
+    max-pages: 1 # Max hard limit by Github is 10
+    parallelism: 10
+  popularity-score-weights:
+    stars: 0.6
+    forks: 0.3

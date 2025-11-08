@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.http.HttpResponse;
 import java.util.Map;
 
-interface IHttpCallerService {
+public interface IHttpCallerService {
     /**
      * Sends a GET request to the specified [uri].
      */
